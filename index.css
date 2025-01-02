@@ -35,11 +35,11 @@ body {
   }
   .container {
     display: flex;
-    justify-content: space-around; /* Вирівнює картки по горизонталі */
-    flex-wrap: wrap; /* Дозволяє карткам переходити на новий рядок, якщо місця недостатньо */
+    justify-content: space-around; 
+    flex-wrap: wrap; 
 }
 
 .product-card {
-    width: 300px; /* Встановлюємо ширину картки */
-    margin: 15px; /* Відстань між картками */
+    width: 300px; 
+    margin: 15px; 
 }
