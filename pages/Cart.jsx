@@ -12,7 +12,7 @@ const Cart = () => {
   const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState(null);
   const [isFormFilled, setIsFormFilled] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);  // Стан для показу процесу відправки
+  const [isSubmitting, setIsSubmitting] = useState(false);  
   const formRef = useRef(null);
 
   const handleRemoveItem = (id) => {
