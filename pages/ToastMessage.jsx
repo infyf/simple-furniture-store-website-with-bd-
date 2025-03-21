@@ -5,13 +5,13 @@ const ToastMessage = ({ message, type, onClose }) => {
 
   useEffect(() => {
     if (message) {
-      setIsVisible(true); // Start the animation for appearance
+      setIsVisible(true); 
 
       const timer = setTimeout(() => {
-        setIsVisible(false); // Disappear after 3 seconds
+        setIsVisible(false); 
         setTimeout(() => {
-          onClose(); // Close after disappearing
-        }, 700); // Delay before closing
+          onClose(); 
+        }, 700); 
       }, 3000);
 
       return () => clearTimeout(timer); // Cleanup the timeout
