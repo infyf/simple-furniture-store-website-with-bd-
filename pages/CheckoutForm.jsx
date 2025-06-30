@@ -22,7 +22,7 @@ const CheckoutForm = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // Add state for delivery and payment methods
+
   const [deliveryMethod, setDeliveryMethod] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("");
 
@@ -34,13 +34,13 @@ const CheckoutForm = () => {
   const validateForm = () => {
     const newErrors = {};
 
-    // Валідація електронної пошти
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(recipient.email)) {
       newErrors.email = "Невірний формат електронної пошти.";
     }
 
-    // Валідація телефону
+
     const phoneRegex = /^\+380\d{9}$/;
     if (!phoneRegex.test(recipient.phone)) {
       newErrors.phone = "Невірний формат номеру телефону.";
@@ -91,7 +91,7 @@ const CheckoutForm = () => {
 
   return (
     <>
-      {/* компонент для відображення повідомлення */}
+
       {successMessage && (
         <ToastMessage
           message={successMessage}
