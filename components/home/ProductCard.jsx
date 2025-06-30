@@ -6,19 +6,19 @@ import { addToWishlist, removeFromWishlist } from '../../slices/wishlistSlice';
 
 const ProductCard = ({ product }) => {
     const dispatch = useDispatch();
-    const wishlistItems = useSelector(state => state.wishlist.items); // Доступ до списку бажань
+    const wishlistItems = useSelector(state => state.wishlist.items); // доступ до списку бажань
     
-    const isInWishlist = wishlistItems.some(item => item.id === product.id); // Перевірка, чи є товар у списку бажань
+    const isInWishlist = wishlistItems.some(item => item.id === product.id); // перевірка, чи є товар у списку бажань
 
     const handleAddToCart = () => {
-        dispatch(addToCart(product)); // Додаємо товар до кошика
+        dispatch(addToCart(product)); // додаємо товар до кошика
     };
 
     const handleWishlistToggle = () => {
         if (isInWishlist) {
-            dispatch(removeFromWishlist(product.id)); // Якщо товар є у списку бажань, видаляємо його
+            dispatch(removeFromWishlist(product.id)); // якщо товар є у списку бажань, видаляємо його
         } else {
-            dispatch(addToWishlist(product)); // Якщо товару немає, додаємо його до списку бажань
+            dispatch(addToWishlist(product)); 
         }
     };
 
