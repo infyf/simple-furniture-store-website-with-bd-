@@ -45,11 +45,11 @@ const Cart = () => {
     }));
 
     try {
-      setIsSubmitting(true);  // Активуємо процес відправки
+      setIsSubmitting(true);  
       const response = await axios.post('https://localhost:7080/api/cart', cartItemsForApi);
       if (response.status === 200) {
         setSuccessMessage('Ваше замовлення успішно оформлено!');
-        dispatch(clearCart());  // Очищаємо кошик після успішного замовлення
+        dispatch(clearCart()); 
       } else {
         setError('Щось пішло не так! Спробуйте ще раз.');
       }
@@ -57,7 +57,7 @@ const Cart = () => {
       console.error('Error submitting order:', error);
       setError('Не вдалося оформити замовлення. Спробуйте ще раз.');
     } finally {
-      setIsSubmitting(false);  // Завершуємо процес відправки
+      setIsSubmitting(false);  // конец процес відправки
     }
   };
 
